@@ -6,26 +6,36 @@ public class JeuxVideo {
     private String titre;
     private String editeur;
     private int ageConseille;
+    private int memoire;
+    private boolean acheter;
 
-
-    public JeuxVideo(String titre, String editeur, int ageConseille) {
+    public JeuxVideo(long noJeuxVideo, String titre, String editeur, int ageConseille, int memoire, boolean acheter) {
+        this.noJeuxVideo = noJeuxVideo;
         this.titre = titre;
         this.editeur = editeur;
         this.ageConseille = ageConseille;
+        this.memoire = memoire;
+        this.acheter = acheter;
     }
 
     public JeuxVideo() {
     }
 
-    @Override
-    public String toString() {
-        final StringBuilder sb = new StringBuilder("JeuxVideo ");
-        sb.append("noJeuxVideo : ").append(noJeuxVideo);
-        sb.append(", titre : '").append(titre).append('\'');
-        sb.append(", editeur : '").append(editeur).append('\'');
-        sb.append(", ageConseille : ").append(ageConseille);
 
-        return sb.toString();
+    public int getMemoire() {
+        return memoire;
+    }
+
+    public void setMemoire(int memoire) {
+        this.memoire = memoire;
+    }
+
+    public boolean isAcheter() {
+        return acheter;
+    }
+
+    public void setAcheter(boolean acheter) {
+        this.acheter = acheter;
     }
 
     public long getNoJeuxVideo() {

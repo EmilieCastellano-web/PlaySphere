@@ -1,9 +1,15 @@
 package bo;
 
+import java.util.List;
+
 public class Bibliotheque {
 
     private long noLibrary;
     private String libelle;
+
+    private List<JeuxVideo> jeuxVideos;
+
+
 
     public Bibliotheque() {
     }
@@ -12,13 +18,20 @@ public class Bibliotheque {
         this.libelle = libelle;
     }
 
-
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Bibliotheque ");
-        sb.append("noLibrary : ").append(noLibrary);
-        sb.append(", libelle : '").append(libelle).append('\'');
+        sb.append("libelle : ").append(libelle);
+        sb.append(", jeuxVideos : ").append(jeuxVideos);
         return sb.toString();
+    }
+
+    public List<JeuxVideo> getJeuxVideos() {
+        return jeuxVideos;
+    }
+
+    public void setJeuxVideos(List<JeuxVideo> jeuxVideos) {
+        this.jeuxVideos = jeuxVideos;
     }
 
     public long getNoLibrary() {
